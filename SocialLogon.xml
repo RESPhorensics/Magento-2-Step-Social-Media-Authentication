@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<layout>
+    <default>
+        <reference name="head">
+            <action method="addItem"
+                ifconfig="customer/SocialLogon_google/enabled">
+                <type>skin_css</type>
+                <name>SocialLogon/google/css/button.css</name>
+            </action>
+            <action method="addItem"
+                ifconfig="customer/SocialLogon_facebook/enabled">
+                <type>skin_css</type>
+                <name>SocialLogon/facebook/css/button.css</name>
+            </action>
+            <action method="addItem"
+                ifconfig="customer/SocialLogon_twitter/enabled">
+                <type>skin_css</type>
+                <name>SocialLogon/twitter/css/button.css</name>
+            </action>
+            <action method="addItem"
+                ifconfig="customer/SocialLogon_linkedin/enabled">
+                <type>skin_css</type>
+                <name>SocialLogon/linkedin/css/button.css</name>
+            </action>
+        </reference>
+    </default>
+
+    <customer_account_login>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>SocialLogon/css/styles.css</name>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="SocialLogon/login" name="SocialLogon_login">
+                <block type="SocialLogon/google_button" name="SocialLogon_google_login_button" />
+                <block type="SocialLogon/facebook_button" name="SocialLogon_facebook_login_button" />
+                <block type="SocialLogon/twitter_button" name="SocialLogon_twitter_login_button" />
+                <block type="SocialLogon/linkedin_button" name="SocialLogon_linkedin_login_button" />
+            </block>
+        </reference>
+    </customer_account_login>
+
+    <customer_account_create>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>SocialLogon/css/styles.css</name>
+            </action>
+        </reference>
+        <reference name="customer_form_register">
+            <action method="setTemplate" >
+                <template>SocialLogon/socialconnect/customer/form/register.phtml</template>
+            </action>
+            <block type="SocialLogon/register" name="SocialLogon_register">
+                <block type="SocialLogon/google_button" name="SocialLogon_checkout_google_button" />
+                <block type="SocialLogon/facebook_button" name="SocialLogon_checkout_facebook_button" />
+                <block type="SocialLogon/twitter_button" name="SocialLogon_checkout_twitter_button" />
+                <block type="SocialLogon/linkedin_button" name="SocialLogon_checkout_linkedin_button" />
+            </block>
+        </reference>
+    </customer_account_create>
+
+    <customer_account>
+        <reference name="customer_account_navigation">
+            <action method="addLink" translate="label" module="SocialLogon"
+                ifconfig="customer/SocialLogon_google/enabled">
+                <name>SocialLogon_google</name>
+                <path>socialconnect/account/google</path>
+                <label>Google Connect</label>
+            </action>
+            <action method="addLink" translate="label" module="SocialLogon"
+                ifconfig="customer/SocialLogon_facebook/enabled">
+                <name>SocialLogon_facebook</name>
+                <path>socialconnect/account/facebook</path>
+                <label>Facebook Connect</label>
+            </action>
+            <action method="addLink" translate="label" module="SocialLogon"
+                ifconfig="customer/SocialLogon_twitter/enabled">
+                <name>SocialLogon_twitter</name>
+                <path>socialconnect/account/twitter</path>
+                <label>Twitter Connect</label>
+            </action>
+            <action method="addLink" translate="label" module="SocialLogon"
+                ifconfig="customer/SocialLogon_linkedin/enabled">
+                <name>SocialLogon_linkedin</name>
+                <path>socialconnect/account/linkedin</path>
+                <label>LinkedIn Connect</label>
+            </action>
+        </reference>
+    </customer_account>
+
+    <SocialLogon_account_google translate="label">
+        <label>Customer My Account Google Connect</label>
+        <update handle="customer_account"/>
+        <reference name="head">
+            <action method="setTitle" translate="title" module="SocialLogon">
+                <title>Google Connect</title>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>SocialLogon/css/styles.css</name>
+            </action>
+        </reference>
+        <reference name="my.account.wrapper">
+            <block type="SocialLogon/google_account" name="SocialLogon_google_account">
+                <block type="SocialLogon/google_button" name="SocialLogon_account_google_button" />
+            </block>
+        </reference>
+        <reference name="customer_account_navigation">
+            <action method="setActive" module="SocialLogon">
+                <path>socialconnect/account/google</path>
+            </action>
+        </reference>
+    </SocialLogon_account_google>
+
+   <SocialLogon_account_facebook translate="label">
+        <label>Customer My Account Facebook Connect</label>
+        <update handle="customer_account"/>
+        <reference name="head">
+            <action method="setTitle" translate="title" module="SocialLogon">
+                <title>Facebook Connect</title>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>SocialLogon/css/styles.css</name>
+            </action>
+        </reference>
+        <reference name="my.account.wrapper">
+            <block type="SocialLogon/facebook_account" name="SocialLogon_facebook_account">
+                <block type="SocialLogon/facebook_button" name="SocialLogon_account_facebook_button" />
+            </block>
+        </reference>
+        <reference name="customer_account_navigation">
+            <action method="setActive" module="SocialLogon">
+                <path>socialconnect/account/facebook</path>
+            </action>
+        </reference>
+    </SocialLogon_account_facebook>
+
+   <SocialLogon_account_twitter translate="label">
+        <label>Customer My Account Twitter Connect</label>
+        <update handle="customer_account"/>
+        <reference name="head">
+            <action method="setTitle" translate="title" module="SocialLogon">
+                <title>Twitter Connect</title>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>SocialLogon/css/styles.css</name>
+            </action>
+        </reference>
+        <reference name="my.account.wrapper">
+            <block type="SocialLogon/twitter_account" name="SocialLogon_twitter_account">
+                <block type="SocialLogon/twitter_button" name="SocialLogon_account_twitter_button" />
+            </block>
+        </reference>
+        <reference name="customer_account_navigation">
+            <action method="setActive" module="SocialLogon">
+                <path>socialconnect/account/twitter</path>
+            </action>
+        </reference>
+    </SocialLogon_account_twitter>
+
+   <SocialLogon_account_linkedin translate="label">
+        <label>Customer My Account LinkedIn Connect</label>
+        <update handle="customer_account"/>
+        <reference name="head">
+            <action method="setTitle" translate="title" module="SocialLogon">
+                <title>LinkedIn Connect</title>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>SocialLogon/css/styles.css</name>
+            </action>
+        </reference>
+        <reference name="my.account.wrapper">
+            <block type="SocialLogon/linkedin_account" name="SocialLogon_linkedin_account">
+                <block type="SocialLogon/linkedin_button" name="SocialLogon_account_linkedin_button" />
+            </block>
+        </reference>
+        <reference name="customer_account_navigation">
+            <action method="setActive" module="SocialLogon">
+                <path>socialconnect/account/linkedin</path>
+            </action>
+        </reference>
+    </SocialLogon_account_linkedin>
+
+    <checkout_onepage_index>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>SocialLogon/css/styles.css</name>
+            </action>
+        </reference>
+        <reference name="checkout.onepage.login">
+            <action method="setTemplate" >
+                <template>SocialLogon/socialconnect/checkout/onepage/login.phtml</template>
+            </action>
+            <block type="SocialLogon/checkout" name="SocialLogon_checkout">
+                <block type="SocialLogon/google_button" name="SocialLogon_checkout_google_button" />
+                <block type="SocialLogon/facebook_button" name="SocialLogon_checkout_facebook_button" />
+                <block type="SocialLogon/twitter_button" name="SocialLogon_checkout_twitter_button" />
+                <block type="SocialLogon/linkedin_button" name="SocialLogon_checkout_linkedin_button" />
+            </block>
+        </reference>
+    </checkout_onepage_index>
+</layout>

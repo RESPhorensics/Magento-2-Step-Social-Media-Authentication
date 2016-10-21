@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<config>
+    <sections>
+        <customer>
+            <groups>
+                <SocialLogon_google translate="label" module="SocialLogon">
+                    <label>Social Connect Google Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>120</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <client_id translate="label" module="SocialLogon">
+                            <label>Google API Client ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><enabled>1</enabled></depends>
+                            <validate>required-entry</validate>
+                        </client_id>
+                        <client_secret translate="label" module="SocialLogon">
+                            <label>Google API Client Secret</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><enabled>1</enabled></depends>
+                            <validate>required-entry</validate>
+                        </client_secret>
+                        <links translate="label" module="SocialLogon">
+                            <label>Links</label>
+                            <frontend_type>label</frontend_type>
+                            <frontend_model>SocialLogon/google_adminhtml_system_config_form_field_links</frontend_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </links>
+                        <origin translate="label" module="SocialLogon">
+                            <label>JavaScript Origins</label>
+                            <frontend_type>label</frontend_type>
+                            <frontend_model>SocialLogon/google_adminhtml_system_config_form_field_origins</frontend_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </origin>
+                        <redirect translate="label" module="SocialLogon">
+                            <label>Redirect URIs</label>
+                            <frontend_type>label</frontend_type>
+                            <frontend_model>SocialLogon/google_adminhtml_system_config_form_field_redirects</frontend_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </redirect>
+                    </fields>
+                </SocialLogon_google>
+                <SocialLogon_facebook translate="label" module="SocialLogon">
+                    <label>Social Connect Facebook Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>130</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <client_id translate="label" module="SocialLogon">
+                            <label>Facebook App ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><enabled>1</enabled></depends>
+                            <validate>required-entry</validate>
+                        </client_id>
+                        <client_secret translate="label" module="SocialLogon">
+                            <label>Facebook App Secret</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><enabled>1</enabled></depends>
+                            <validate>required-entry</validate>
+                        </client_secret>
+                        <links translate="label" module="SocialLogon">
+                            <label>Links</label>
+                            <frontend_type>label</frontend_type>
+                            <frontend_model>SocialLogon/facebook_adminhtml_system_config_form_field_links</frontend_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </links>
+                        <origin translate="label" module="SocialLogon">
+                            <label>App Domains</label>
+                            <frontend_type>label</frontend_type>
+                            <frontend_model>SocialLogon/facebook_adminhtml_system_config_form_field_origins</frontend_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </origin>
+                        <redirect translate="label" module="SocialLogon">
+                            <label>Site URL</label>
+                            <frontend_type>label</frontend_type>
+                            <frontend_model>SocialLogon/facebook_adminhtml_system_config_form_field_redirects</frontend_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </redirect>
+                    </fields>
+                </SocialLogon_facebook>
+                <SocialLogon_twitter translate="label" module="SocialLogon">
+                    <label>Social Connect Twitter Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>140</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <client_id translate="label" module="SocialLogon">
+                            <label>Consumer Key</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><enabled>1</enabled></depends>
+                            <validate>required-entry</validate>
+                        </client_id>
+                        <client_secret translate="label" module="SocialLogon">
+                            <label>Consumer Secret</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><enabled>1</enabled></depends>
+                            <validate>required-entry</validate>
+                        </client_secret>
+                        <links translate="label" module="SocialLogon">
+                            <label>Links</label>
+                            <frontend_type>label</frontend_type>
+                            <frontend_model>SocialLogon/twitter_adminhtml_system_config_form_field_links</frontend_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </links>
+                        <origin translate="label" module="SocialLogon">
+                            <label>Website</label>
+                            <frontend_type>label</frontend_type>
+                            <frontend_model>SocialLogon/twitter_adminhtml_system_config_form_field_origins</frontend_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </origin>
+                        <redirect translate="label" module="SocialLogon">
+                            <label>Callback URL</label>
+                            <frontend_type>label</frontend_type>
+                            <frontend_model>SocialLogon/twitter_adminhtml_system_config_form_field_redirects</frontend_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </redirect>
+                    </fields>
+                </SocialLogon_twitter>
+                <SocialLogon_linkedin translate="label" module="SocialLogon">
+                    <label>Social Connect LinkedIn Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>150</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <client_id translate="label" module="SocialLogon">
+                            <label>LinkedIn API Key</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><enabled>1</enabled></depends>
+                            <validate>required-entry</validate>
+                        </client_id>
+                        <client_secret translate="label" module="SocialLogon">
+                            <label>LinkedIn Secret Key</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><enabled>1</enabled></depends>
+                            <validate>required-entry</validate>
+                        </client_secret>
+                        <links translate="label" module="SocialLogon">
+                            <label>Links</label>
+                            <frontend_type>label</frontend_type>
+                            <frontend_model>SocialLogon/linkedin_adminhtml_system_config_form_field_links</frontend_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </links>
+                        <origin translate="label" module="SocialLogon">
+                            <label>Website URL</label>
+                            <frontend_type>label</frontend_type>
+                            <frontend_model>SocialLogon/linkedin_adminhtml_system_config_form_field_origins</frontend_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </origin>
+                        <redirect translate="label" module="SocialLogon">
+                            <label>OAuth 2.0 Redirect URLs</label>
+                            <frontend_type>label</frontend_type>
+                            <frontend_model>SocialLogon/linkedin_adminhtml_system_config_form_field_redirects</frontend_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </redirect>
+                    </fields>
+                </SocialLogon_linkedin>
+            </groups>
+        </customer>
+    </sections>
+</config>
